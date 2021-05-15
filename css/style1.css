@@ -1,0 +1,130 @@
+/* Leaflet map container */
+#leaflet-map-container {
+    height: 400px;
+    max-width: 90vw;
+    border-radius: 6px;
+}
+
+/* Document body */
+body {
+    /* Declare global css variables */
+    --color-zero: #272222;
+    --color-one: #ffffff;
+    --color-two: #f0d019;
+    --color-three: #4e4e4e;
+    --color-four: #2c2c2c;
+
+    color: var(--color-one);
+    background-color: var(--color-zero);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0;
+}
+
+/* Navigation bar */
+#navbar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-grow: 2;
+    padding: 0;
+}
+
+/* Navigation bar items*/
+#navbar > div {
+    flex-grow: 2;
+    background-color: var(--color-four);
+    padding: 20px;
+    text-align: center;
+    border: var(--color-three) 1px solid;
+}
+
+/* Links */
+a {
+    color: lightblue;
+}
+
+/* Body content */
+#body-content {
+    max-width: 1080px;
+    width: 90vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+}
+
+/* Headers */
+h1, h2, h3 {
+    color: var(--color-two);
+}
+
+/* Container for content that will change over time */
+#dynamic-content-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* The content that changes over time */
+#dynamic-content-container > * {
+    min-width: 145px;
+    margin: 10px;
+    border-left: var(--color-four) dashed 2px;
+    padding-left: 20px;
+}
+
+/* Container for info about a town */
+#town-info-container {
+    flex-grow: 1;
+}
+
+/* The info about a town */
+#town-info-container > * {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+
+/* Information text */
+.info {
+    font-family: sans-serif;
+    color: var(--color-one);
+}
+
+/* Container for recent towns */
+#recent-towns-container {
+    display: flex;
+    flex-direction: column;
+}
+
+/* The recent towns */
+#recent-towns-container > * {
+    display: flex;
+    align-items: center;
+    height: 52px;
+}
+
+/* Search recent town */
+.recent-town:hover > p {
+    border-bottom: var(--color-two) solid 1px;
+    transform: translateY(0);
+}
+
+/* Buttons, submit inputs and text inputs */
+button, input[type='submit'], input[type='text'] {
+    height: 2em;
+    border: none;
+    border-radius: 6px;
+    margin: 3px;
+}
+
+/* Buttons and submit inputs */
+button, input[type='submit'] {
+    color: var(--color-one);
+    background-color: var(--color-three);
+}
+
+/* Text inputs */
+input[type='text'] {
+    color: var(--color-four);
+    background-color: var(--color-one);
+}
